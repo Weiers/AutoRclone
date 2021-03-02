@@ -42,7 +42,8 @@ def _generate_id(prefix='saf-'):
 
 # List projects using service
 def _get_projects(service):
-    print([i['projectId'] for i in service.projects().list().execute()['projects']])
+    tmpArr=([i['projectId'] for i in service.projects().list().execute()['projects']])
+    return [tmpArr[0]]
     # return [i['projectId'] for i in service.projects().list().execute()['projects']]
 
 # Default batch callback handler
